@@ -180,6 +180,8 @@ $access_token = $content.access_token
 $rootCollectionPolicy = getMetadataPolicy $access_token $accountName
 addRoleAssignment $rootCollectionPolicy $objectId "data-curator"
 addRoleAssignment $rootCollectionPolicy $objectId "data-source-administrator"
+addRoleAssignment $rootCollectionPolicy $objectId "data-quality-curator"
+addRoleAssignment $rootCollectionPolicy $objectId "data-quality-reader"
 addRoleAssignment $rootCollectionPolicy $adfPrincipalId "data-curator"
 $updatedPolicy = putMetadataPolicy $access_token $rootCollectionPolicy.id $rootCollectionPolicy
 
